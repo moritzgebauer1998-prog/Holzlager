@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Holzlagerverwaltung</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="app.js"></script>
+</head>
+<body><input name="datum" type="date" value="2025-10-02"/>
+<h1>📦 Holzlagerverwaltung</h1>
+<form id="holzForm">
+<label>Holzart:
+      <select id="holzart" required="">
+<option value="">Bitte wählen</option>
+<option value="Buche">Buche</option>
+<option value="Eiche">Eiche</option>
+<option value="Kiefer">Kiefer</option>
+</select>
+</label>
+<label>Verarbeitung:
+      <select id="verarbeitung" required="">
+<option value="">Bitte wählen</option>
+<option value="BigBag">BigBag</option>
+<option value="Bündel">Bündel</option>
+</select>
+</label>
+<label id="stuecklaengeLabel" style="display:none;">Stücklänge:
+      <select id="stuecklaenge">
+<option value="">Bitte wählen</option>
+<option value="25cm">25 cm</option>
+<option value="33cm">33 cm</option>
+</select>
+</label>
+<label>Menge:
+      <input id="menge" min="1" required="" type="number"/>
+</label>
+<label>Eingelagert am:
+      <input id="eingelagertAm" required="" type="date"/>
+</label>
+<button type="submit">➕ Eintrag speichern</button>
+</form>
+<h2>📋 Lagerbestand<table border="1"><tr><th>Artikel</th><th>Menge</th><th>Einheit</th></tr><tr><td>BigBag 25cm</td><td>10</td><td>Stück</td></tr></table></h2>
+<ul id="eintraegeListe"></ul>
+</body>
+</html>
